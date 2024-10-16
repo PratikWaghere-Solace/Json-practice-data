@@ -74,7 +74,7 @@ foreach($listing as $list){
 // print_r($variation);
 // echo '</pre>';
 
-echo json_encode($variation);
+// echo json_encode($variation);
 
 $variation_data = json_encode($variation, JSON_PRETTY_PRINT);
 $file = 'inventory_feed.json';
@@ -97,22 +97,30 @@ foreach($listing as $list){
     $shiping[] = $ship;
 }
 
-print_r($shiping);
+// print_r($shiping);
 
-echo json_encode($shiping);
+// echo json_encode($shiping);
 
 $shiping_data = json_encode($shiping, JSON_PRETTY_PRINT);
 $file2 = 'shipping_profile_feed.json';
 file_put_contents($file2, $shiping_data);
 
 exec('git status',$output1,$result1);
-echo $output1;
+echo '<pre>';
+print_r($output1);
+echo '</pre>';
 exec('git add .',$output2, $result2);
-echo $output2;
+echo '<pre>';
+print_r($output2);
+echo '</pre>';
 exec('git commit -m "Added new feature to improve performance"',$output3,$result3);
-echo $output3;
+echo '<pre>';
+print_r($output3);
+echo '</pre>';
 exec('git push origin maste',$output4,$result4);
-echo $output4;
+echo '<pre>';
+print_r($output4);
+echo '</pre>';
 
 
 
