@@ -105,6 +105,9 @@ $shiping_data = json_encode($shiping, JSON_PRETTY_PRINT);
 $file2 = 'shipping_profile_feed.json';
 file_put_contents($file2, $shiping_data);
 
+
+sleep(20);
+
 exec('git status',$output1,$result1);
 echo '<pre>';
 print_r($output1);
