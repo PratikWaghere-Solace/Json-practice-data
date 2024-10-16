@@ -1,0 +1,92 @@
+[
+  {
+    "listing_id": 123456790,
+    "title": "Vintage Metal Frame",
+    "variations": [
+      {
+        "name": "Small",
+        "sku": "MET123"
+      },
+      {
+        "name": "Medium",
+        "sku": "MET456"
+      },
+      {
+        "name": "Large",
+        "sku": "MET789"
+      }
+    ]
+  },
+  {
+    "listing_id": 123456791,
+    "title": "Modern Plastic Frame",
+    "variations": [
+      {
+        "name": "Small",
+        "sku": "PLA123"
+      },
+      {
+        "name": "Medium",
+        "sku": "PLA456"
+      },
+      {
+        "name": "Large",
+        "sku": "PLA789"
+      }
+    ]
+  },
+  {
+    "listing_id": 123456792,
+    "title": "Classic Wooden Frame",
+    "variations": [
+      {
+        "name": "Small",
+        "sku": "WOD123"
+      },
+      {
+        "name": "Medium",
+        "sku": "WOD456"
+      },
+      {
+        "name": "Large",
+        "sku": "WOD789"
+      }
+    ]
+  },
+  {
+    "listing_id": 123456793,
+    "title": "Artistic Glass Frame",
+    "variations": [
+      {
+        "name": "Small",
+        "sku": "GLA123"
+      },
+      {
+        "name": "Medium",
+        "sku": "GLA456"
+      },
+      {
+        "name": "Large",
+        "sku": "GLA789"
+      }
+    ]
+  },
+  {
+    "listing_id": 123456794,
+    "title": "Decorative Ceramic Frame",
+    "variations": [
+      {
+        "name": "Small",
+        "sku": "CER123"
+      },
+      {
+        "name": "Medium",
+        "sku": "CER456"
+      },
+      {
+        "name": "Large",
+        "sku": "CER789"
+      }
+    ]
+  }
+]
