@@ -111,18 +111,22 @@ sleep(20);
 exec('git status',$output1,$result1);
 echo '<pre>';
 print_r($output1);
+print_r($result1);
 echo '</pre>';
 exec('git add .',$output2, $result2);
 echo '<pre>';
 print_r($output2);
+print_r($result2);
 echo '</pre>';
 exec('git commit -m "Added new feature to improve performance"',$output3,$result3);
 echo '<pre>';
 print_r($output3);
+print_r($result3);
 echo '</pre>';
 exec('git push origin maste',$output4,$result4);
 echo '<pre>';
 print_r($output4);
+print_r($result4);
 echo '</pre>';
 
 
