@@ -2,7 +2,7 @@
 header('Content-Type:application/json');
 require "./db.php";
 
-
+// https://pratikwaghere-solace.github.io/Json-practice-data/inventory.json
 $listing_info = "Select * from product";
 $stmt = $pdo->prepare($listing_info);
 $list =  $stmt->execute();
@@ -65,7 +65,7 @@ foreach($listing as $list){
 }
 
 // echo '<pre>';
-print_r($shiping_list);
+// print_r($shiping_list);
 // echo '</pre>';
 
     
@@ -74,7 +74,37 @@ print_r($shiping_list);
 // print_r($variation);
 // echo '</pre>';
 
-// echo json_encode($variation);
+echo json_encode($variation);
+
+$variation_data = json_encode($variation, JSON_PRETTY_PRINT);
+$file = 'inventory_feed.json';
+file_put_contents($file, $variation_data);
+
+$shiping = [];
+$sid = 0;
+
+foreach($listing as $list){
+        foreach($shiping_list as $slis){
+            $ship = [   
+            'id' =>  $sid,
+            'listing_id' => $list['listing_id'],
+            'title' => $list['title'],
+            'shiping_id'=> $slis['profile_id'],
+            'shipping_profiles'=> $slis['name']
+            ];
+       }
+    $sid++;
+    $shiping[] = $ship;
+}
+
+print_r($shiping);
+
+echo json_encode($shiping);
+
+$shiping_data = json_encode($shiping, JSON_PRETTY_PRINT);
+$file2 = 'shipping_profile_feed.json';
+file_put_contents($file2, $shiping_data);
+
 
 
 
